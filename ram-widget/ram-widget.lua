@@ -12,7 +12,7 @@ local function worker(args)
     ramgraph_widget = wibox.widget {
         border_width = 0,
         colors = {
-            '#74aeab', '#26403f'
+            '#00FF02', '#007301'
         },
         display_labels = false,
         forced_width = 25,
@@ -32,9 +32,9 @@ local function worker(args)
     w:setup {
         border_width = 0,
         colors = {
-            '#5ea19d',
-            '#55918e',
-            '#4b817e',
+            '#009AD2',
+            '#00FF02',
+            '#D26900',
         },
         display_labels = false,
         forced_width = 25,

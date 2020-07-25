@@ -112,7 +112,7 @@ local function worker(args)
         visible = false,
         shape = gears.shape.rounded_rect,
         border_width = 1,
-        border_color = beautiful.bg_normal,
+        border_color = "#00000070",
         maximum_width = 300,
         offset = { y = 5 },
         widget = {}
@@ -175,10 +175,10 @@ local function worker(args)
                                 paddings = 1,
                                 margins = 4,
                                 border_width = 1,
-                                border_color = beautiful.bg_focus,
-                                background_color = beautiful.bg_normal,
+                                border_color = "#000000",
+                                background_color = "#00000070",
                                 bar_border_width = 1,
-                                bar_border_color = beautiful.bg_focus,
+                                bar_border_color = "#000000",
                                 color = "linear:150,0:0,0:0,#D08770:0.3,#BF616A:0.6," .. beautiful.fg_normal,
                                 widget = wibox.widget.progressbar,
 
@@ -224,8 +224,8 @@ local function worker(args)
                                 widget = wibox.container.background
                             }
 
-                            row:connect_signal("mouse::enter", function(c) c:set_bg(beautiful.bg_focus) end)
-                            row:connect_signal("mouse::leave", function(c) c:set_bg(beautiful.bg_normal) end)
+                            row:connect_signal("mouse::enter", function(c) c:set_bg("#000000") end)
+                            row:connect_signal("mouse::leave", function(c) c:set_bg("#00000070") end)
                             
                             if enable_kill_button then
                                 row:connect_signal("mouse::enter", function(c) kill_proccess_button.icon.opacity = 1 end)
@@ -267,7 +267,7 @@ local function worker(args)
                         {
                             orientation = 'horizontal',
                             forced_height = 15,
-                            color = beautiful.bg_focus,
+                            color = "#000000",
                             widget = wibox.widget.separator
                         },
                         create_process_header{with_action_column = enable_kill_button},
