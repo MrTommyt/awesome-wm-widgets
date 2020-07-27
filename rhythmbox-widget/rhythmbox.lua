@@ -14,3 +14,5 @@ watch(
         rhythmbox_widget:set_text(stdout)
     end
 )
+
+return rhythmbox_widget
