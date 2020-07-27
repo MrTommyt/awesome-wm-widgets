@@ -115,6 +115,7 @@ local function worker(args)
         border_color = "#00000070",
         maximum_width = 300,
         offset = { y = 5 },
+        bg = "#00000070",
         widget = {}
     }
 

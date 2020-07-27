@@ -25,7 +25,7 @@ local function worker(args)
         width = 400,
         ontop = true,
         expand = true,
-        bg = '#1e252c',
+        bg = "#00000070",-- '#1e252c',
         max_widget_size = 500
     }
 
