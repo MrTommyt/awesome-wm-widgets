@@ -203,7 +203,7 @@ local function worker(args)
             {
                 {
                     id = 'temp',
-                    font = font_name .. ' 48',
+                    font = font_name .. ' 36',
                     widget = wibox.widget.textbox
                 },
                 {
@@ -370,8 +370,6 @@ local function worker(args)
             local count = #self
             for i = 0, count do self[i]=nil end
 
-
-            table.insert(self, temp_below)
             table.insert(self, wibox.widget{
                 {
                     hourly_forecast_graph,
