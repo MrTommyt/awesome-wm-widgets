@@ -8,9 +8,9 @@
 -- @copyright 2020 Pavel Makhov
 -------------------------------------------------
 
+local json = require("json4lua")
 local awful = require("awful")
 local wibox = require("wibox")
-local json = require("json")
 local spawn = require("awful.spawn")
 local naughty = require("naughty")
 local gears = require("gears")
