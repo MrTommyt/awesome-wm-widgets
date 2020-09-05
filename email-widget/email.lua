@@ -2,6 +2,7 @@ local wibox = require("wibox")
 local awful = require("awful")
 local naughty = require("naughty")
 local watch = require("awful.widget.watch")
+local os = require("os")
 
 local path_to_icons = "/home/mrtommy/Imágenes/icons/"
 
@@ -10,6 +11,12 @@ email_widget:set_font('Play 9')
 
 email_icon = wibox.widget.imagebox()
 email_icon:set_image(path_to_icons .. "/mail.png")
+
+function sleep(n)
+    if n > 0 then
+        os.execute("ping -n " .. tonumber(n + 1) .. " localhost > NUL")
+    end  
+end
 
 watch(
     "python /home/mrtommy/.config/awesome/awesome-wm-widgets/email-widget/count_unread_emails.py", 20,
@@ -27,7 +34,7 @@ watch(
 
 
 function show_emails()
-    awful.spawn.easy_async("bash -c 'python /home/mrtommy/.config/awesome/awesome-wm-widgets/email-widget/read_unread_emails.py']]",
+    awful.spawn.easy_async("[[bash -c 'python /home/mrtommy/.config/awesome/awesome-wm-widgets/email-widget/read_unread_emails.py']]",
         function(stdout, stderr, reason, exit_code)
             naughty.notify{
                 text = stdout,
